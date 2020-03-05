@@ -1,0 +1,250 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@import '_variables';
+@import '_mixins';
+@import '_basics';
+
+.homeContainer {
+    width: 100%;
+    // min-height: 100vh;
+    background: $red;
+    padding: 50px 0px;
+    @include h1h5();
+
+    h1 {
+        color: $white;
+        font-size: 2em;
+    }
+}
+
+
+.services {
+    position: relative;
+    min-height: 100vh;
+    background: $white;
+
+    .title-absolut-row {
+        width: 100%;
+        min-height: 40px;
+        position: absolute;
+        top: -20px;
+        @include fx-center(row);
+
+        .title {
+            padding: 8px 15px;
+            min-width: 200px;
+            color: $white;
+            background: $blue;
+            border: 2px $white solid;
+            border-radius: 20px;
+            text-align: center;
+        }
+    }
+
+    .pref {
+        padding-top: 50px;
+
+        .heading {
+            width: 100%;
+            color: $red;
+            @include txt-center();
+        }
+
+        .description {
+            @include txt-center();
+            color: $black;
+
+        }
+
+        @include h1h5();
+
+    }
+
+    .service-cards {
+        @include mt50();
+
+        @include cardproperities();
+
+
+
+    }
+}
+
+
+.domainSearch {
+    padding: 50px 0px;
+    border-top: 2px solid $red;
+    border-bottom: 2px solid $red;
+    @include mt50();
+
+    .title,
+    .sub-title {
+        color: $blue;
+    }
+
+    .sub-title {
+        margin-top: 10px;
+    }
+
+    .price {
+        color: $red;
+    }
+
+    .searchgroup {
+        display: flex;
+
+        @include media-breakpoint-down(sm) {
+            flex-wrap: wrap;
+        }
+
+        .search {
+            min-width: 300px;
+            border-radius: 50px;
+            text-align: center;
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
+        .btns {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .btn {
+                margin-left: 5px;
+                border-radius: 50px;
+                padding: 5px 10px;
+            }
+        }
+    }
+
+}
+
+.hostingPlans {
+    .main-section {
+        margin-top: 50px;
+        padding: 50px 0px;
+        background: $blue;
+        border-radius: 50px;
+
+        .title,
+        .sub-title {
+            color: white;
+        }
+
+        .sub-title {
+            margin-top: 10px;
+        }
+
+        .nav-tabs {
+            margin-top: 10px;
+            border: none !important;
+
+            .nav-item {
+                background: $white;
+                color: $black;
+                border-radius: 50px;
+                padding: 5px 15px;
+                margin: 0px 5px;
+                border: none !important;
+            }
+
+            >.active {
+                background: $red;
+                color: $white;
+            }
+        }
+
+        .tab-content {
+            width: 100%;
+            padding-top: 25px;
+            @include cardproperities();
+
+            .tab-pane.active {
+                animation: slide-down 2s ease-out;
+            }
+
+            @keyframes slide-down {
+                0% {
+                    opacity: 0;
+                    transform: translateY(20%);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .custom-card { 
+
+                .title,
+                .sub-title {
+                    text-align: center;
+                    color: $black;
+                }
+
+                .title {
+                    font-weight: bold;
+                }
+
+                .sub-title {
+                    font-weight: normal;
+                }
+
+                .list {
+                    padding: 15px 10px;
+
+                    ul {
+                        list-style: none;
+
+                        li {
+                            color: $black;
+                            position: relative;
+                            margin-top: 5px;
+                            font-size: .9em;
+
+                            &::after {
+                                content: '';
+                                background: $blue;
+                                width: 10px;
+                                height: 10px;
+                                border-radius: 50%;
+                                position: absolute;
+                                top: calc(50% - 4px);
+                                left: -20px;
+
+                            }
+                        }
+                    }
+                }
+
+                .price {
+                    text-align: center;
+                    color: $blue;
+                    font-weight: bold;
+                }
+
+
+            }
+        }
+
+
+
+        // .custom-card {
+        //     margin-top: 10px;
+        // }
+    }
+}
+
+// reusable code 
+
+@import '_loading';
+// 01111381188
+// 01067321799
